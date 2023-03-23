@@ -7,6 +7,7 @@
     tools:context=".MainActivity">
 
     <ImageView
+        android:id="@+id/imageview"
         android:layout_width="250dp"
         android:layout_height="250dp"
         android:src="@drawable/logo"
@@ -17,13 +18,22 @@
         />
 
     <TextView
+        android:id="@+id/textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TE AUTOD"
         android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@id/imageview"
+        app:layout_constraintEnd_toEndOf="@id/imageview"
+        app:layout_constraintStart_toStartOf="@id/imageview"
+        />
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/textview"
+        app:layout_constraintStart_toStartOf="@id/textview"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
